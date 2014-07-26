@@ -1,4 +1,4 @@
-package gr8conf
+
 
 import net.sf.jsqlparser.parser.CCJSqlParserManager
 

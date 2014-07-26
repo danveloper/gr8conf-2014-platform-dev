@@ -6,8 +6,16 @@ repositories {
 }
 
 dependencies {
-  compile 'org.codehaus.groovy:groovy-all:2.4.0-beta-1'
+  compile 'org.codehaus.groovy:groovy-all:2.3.5'
   compile 'net.sf.jsqlparser:jsqlparser:0.8.0'
+
+  compile 'org.springframework.boot:spring-boot-starter-web:1.1.4.RELEASE'
+  compile 'io.ratpack:ratpack-groovy-test:0.9.6'
 }
 
+task(run, dependsOn:'classes', type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'gr8conf.web.App'
+}
 
+defaultTasks 'run'
